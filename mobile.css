@@ -1,0 +1,142 @@
+*{margin: 0px; padding: 0px;
+}
+
+.container{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    height: 70px;
+    box-sizing: border-box;
+    
+}
+
+.Logo{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.Logo:hover{
+    background-color: rgb(37, 35, 35);
+    cursor: pointer;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.nav{
+    padding: 1rem;
+    
+}
+.btnMenu{
+    display: flex;
+    text-align: center;
+    position: absolute;
+    width: 80px;
+    color: #5e5858;
+    height: 25px;
+    border-radius: 5px;
+    top:4%;
+    right:8%;
+    visibility:hidden;
+    background: none;
+    padding: .1rem 1rem;
+    cursor: pointer;   
+}
+.span{
+    display: inline-block;
+    border-top: 2px solid #5e5858;
+    width: 20px; 
+    margin-left: 5px;  
+    transition: .10s;
+    position: relative;
+    
+}
+.span::after, .span::before{
+    content:'';
+    background: currentColor;
+    display: block;
+    width: 20px;  
+    height: 2px;
+    margin-top: 5px;
+    position: relative;
+    
+    
+
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    
+     
+}
+
+.menu li{
+    margin-left: 2rem;
+}
+.menu li:hover{
+    background-color: rgb(37, 35, 35);
+    cursor: pointer;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+.menu .ldireito{
+    margin-right: 2rem;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+}
+
+@media screen and (max-width:600px) {
+    .menu{
+        display: block;
+        background-color: #000000;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top:70px;
+        right: 0px;   
+        opacity: 0;   
+
+
+    }
+    .menu li{
+        padding: 1rem ;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #948b8b;
+        
+    }
+
+    .btnMenu{
+        visibility:visible;
+    }
+    
+    #nav.acao .menu{
+        opacity: 1;
+
+    }
+    #nav.acao .span{
+        border-top: none;
+        top:-5px;
+
+    }
+    #nav.acao .span::after{
+     transform: rotate(135deg);
+     
+    }
+
+    #nav.acao .span::before{
+     transform: rotate(-135deg);
+     top: 7px;
+    }
+    
+}
